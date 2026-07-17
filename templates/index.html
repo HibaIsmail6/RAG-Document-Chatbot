@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Document Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📄 RAG Document Chatbot</h1>
+    <p class="subtitle">
+        Upload a PDF and ask questions about its contents.
+    </p>
+
+   <div class="upload-card">
+       <h2>📄 Upload Document</h2>
+       <form id="uploadForm" enctype="multipart/form-data">
+           <label for="pdf" class="upload-area">
+               <div class="upload-icon">📄</div>
+               <h3>Drag & Drop your PDF here</h3>
+               <p>or click to browse</p>
+               <input
+                type="file"
+                name="pdf"
+                id="pdf"
+                accept=".pdf"
+                hidden>
+           </label>
+           <div class="upload-actions">
+               <span id="fileName">
+                   No file selected
+               </span>
+               <button type="submit">
+                   Upload PDF
+               </button>
+           </div>
+       </form>
+       <p id="uploadStatus"></p>
+
+<div id="documentInfo" class="document-info hidden">
+
+    <h3>📄 Current Document</h3>
+
+    <div class="info-row">
+        <span>Name</span>
+        <span id="docName">-</span>
+    </div>
+
+    <div class="info-row">
+        <span>File Size</span>
+        <span id="docSize"></span>
+    </div>
+
+    <div class="info-row">
+        <span>Uploaded</span>
+
+        <span id="docUploadTime"></span>
+
+    </div>
+
+    <div class="info-row">
+        <span>Characters</span>
+        <span id="docCharacters">-</span>
+    </div>
+
+    <div class="info-row">
+        <span>Chunks</span>
+        <span id="docChunks">-</span>
+    </div>
+
+    <div class="info-row">
+        <span>Embeddings</span>
+        <span id="docEmbeddings">-</span>
+    </div>
+
+    <div class="info-row">
+        <span>Status</span>
+        <span class="ready">🟢 Ready</span>
+    </div>
+
+</div>
+   </div>
+
+    <div class="chat-card">
+
+    <div class="chat-header">
+
+        <h2>💬 Chat with your Document</h2>
+
+        <button id="clearChatBtn">
+            🗑 Clear Chat
+        </button>
+
+    </div>
+
+    <div id="chatBox" class="chat-box">
+            <div class="empty-chat">
+                <div class="empty-icon">🤖</div>
+                <h3>Start a conversation</h3>
+                <p>
+                    Upload a PDF and ask anything about its contents.
+                </p>
+            </div>
+        </div>
+
+    <div class="input-area">
+
+        <input
+            id="question"
+            type="text"
+            placeholder="Ask anything about your document..."
+        >
+
+        <button id="askBtn">
+            ➜
+        </button>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/toast.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<footer>
+
+Built with ❤️ using Flask • FAISS • Sentence Transformers • Groq
+
+</footer>
+
+</body>
+</html>
