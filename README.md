@@ -10,7 +10,6 @@ Ask questions about any PDF using Retrieval-Augmented Generation (RAG). The appl
 ![FAISS](https://img.shields.io/badge/FAISS-Vector%20Database-orange)
 ![Sentence Transformers](https://img.shields.io/badge/Sentence--Transformers-Embeddings-green)
 ![Groq](https://img.shields.io/badge/Groq-LLM-purple)
-![License](https://img.shields.io/badge/License-MIT-success)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
 ## 🚀 Preview
@@ -18,6 +17,10 @@ Ask questions about any PDF using Retrieval-Augmented Generation (RAG). The appl
 <p align="center">
   <img src="static/images/rag-chatbot.png" width="900">
 </p>
+
+## 🎯 Project Objective
+
+The goal of this project is to demonstrate how Retrieval-Augmented Generation (RAG) can be used to build intelligent document question-answering systems. Instead of relying solely on an LLM's general knowledge, the chatbot retrieves relevant document context using semantic search and generates grounded responses based on the uploaded PDF.
 
 ## ✨ Features
 
@@ -52,7 +55,7 @@ Ask questions about any PDF using Retrieval-Augmented Generation (RAG). The appl
 - CSS3
 - JavaScript
 
-### Libraries
+### Core Libraries
 - PyPDF
 - NumPy
 - Markdown (Marked.js)
@@ -239,14 +242,15 @@ Building this project strengthened my understanding of modern AI application dev
 
 Planned enhancements for future versions include:
 
-- 📁 Support multiple PDF documents simultaneously
-- 💬 Conversation memory across multiple questions
-- ⚡ Streaming AI responses
-- 📌 Highlight answer text inside the PDF
-- 🔍 OCR support for scanned PDF documents
-- 🌐 Deploy the application online
-- 👤 User authentication and chat history
-- 🐳 Docker support for easier deployment
+📄 Support DOCX documents
+
+🌍 Multiple language support
+
+📱 Mobile-friendly interface
+
+📦 Docker deployment
+
+☁️ Cloud deployment
 
 ## 👩‍💻 Author
 
