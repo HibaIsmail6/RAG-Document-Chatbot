@@ -18,6 +18,10 @@ Ask questions about any PDF using Retrieval-Augmented Generation (RAG). The appl
   <img src="static/images/rag-chatbot.png" width="900">
 </p>
 
+## 🎯 Project Objective
+
+The goal of this project is to demonstrate how Retrieval-Augmented Generation (RAG) can be used to build intelligent document question-answering systems. Instead of relying solely on an LLM's general knowledge, the chatbot retrieves relevant document context using semantic search and generates grounded responses based on the uploaded PDF.
+
 
 ## ✨ Features
 
