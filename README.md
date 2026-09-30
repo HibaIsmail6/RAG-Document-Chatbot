@@ -413,4 +413,4 @@ Planned enhancements for future versions include:
 ### Connect with me
 
 * GitHub: https://github.com/HibaIsmail6
-* LinkedIn: [www.linkedin.com/in/hiba-ismail-406958250](http://www.linkedin.com/in/hiba-ismail-406958250)
+* LinkedIn: [www.linkedin.com/in/hibaismail06](http://www.linkedin.com/in/hiba-ismail-406958250)
