@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
 </head>
@@ -48,6 +47,19 @@
 <div id="documentInfo" class="document-info hidden">
 
     <h3>📄 Current Document</h3>
+
+    <div class="document-selector">
+    <label for="documentSelect">Chat with:</label>
+
+    <select id="documentSelect">
+        <option value="">Select a document</option>
+    </select>
+    </div>
+    <div class="uploaded-documents">
+    <h4>Uploaded Documents</h4>
+
+    <div id="documentList"></div>
+    </div>
 
     <div class="info-row">
         <span>Name</span>
@@ -128,10 +140,13 @@
 </div>
 
     </div>
-
 </div>
 
 <script src="{{ url_for('static', filename='js/toast.js') }}"></script>
+<script>
+    const existingDocuments = {{ documents | tojson }};
+    console.log("Existing documents:", existingDocuments);
+</script>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 

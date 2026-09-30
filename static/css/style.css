@@ -775,3 +775,53 @@ footer{
     }
 
 }
+
+/* Uploaded Documents */
+
+.uploaded-documents {
+    margin-top: 25px;
+}
+
+.uploaded-documents h4 {
+    margin-bottom: 12px;
+}
+
+.document-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.document-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.document-details strong {
+    font-size: 15px;
+}
+
+.document-details span {
+    font-size: 13px;
+    color: #666;
+}
+
+.delete-document {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.source-content {
+    padding: 12px 14px;
+    margin-top: 8px;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 14px;
+}

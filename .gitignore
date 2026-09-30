@@ -1,5 +1,6 @@
 # Virtual Environment
 .venv/
+venv/
 
 # Python cache
 __pycache__/
@@ -8,11 +9,21 @@ __pycache__/
 # Environment variables
 .env
 
-# Upload folder
+# Uploads / generated data
 uploads/
+documents.json
 
 # IDE files
 .idea/
+.vscode/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
 
 # Operating System
 .DS_Store

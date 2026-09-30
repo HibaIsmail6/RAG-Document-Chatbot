@@ -2,22 +2,24 @@ import re
 from pypdf import PdfReader
 
 
-def extract_text(pdf_path: str) -> str:
+def extract_text(pdf_path: str):
     reader = PdfReader(pdf_path)
 
     pages = []
 
-    for page in reader.pages:
+    for page_number, page in enumerate(reader.pages, start=1):
         page_text = page.extract_text()
 
         if page_text:
-            # normalize whitespace
-            page_text = page_text.replace("\r", " ")
-            page_text = page_text.replace("\n", " ")
+            page_text = page_text.replace("\r", "\n")
 
-            # collapse repeated spaces
-            page_text = re.sub(r"\s+", " ", page_text)
+            # Keep line breaks, but clean excessive whitespace
+            page_text = re.sub(r"[ \t]+", " ", page_text)
+            page_text = re.sub(r"\n{2,}", "\n\n", page_text)
 
-            pages.append(page_text.strip())
+            pages.append({
+                "text": page_text.strip(),
+                "page": page_number
+            })
 
-    return "\n\n".join(pages)
+    return pages
